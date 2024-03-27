@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Formulário com Campo Condicional e Redirecionamento</title>
+      <link rel="stylesheet" href="Manutenção.css">
+    </head>
+
+  <body>
+
+  <form id="meuFormulario">
+  
+     <h2 class="tema">Registro de Manutenção</h2> <br>
+  
+   <div id="placa" autocomplete="off" required>
+
+     <label   for="senioridade">  <b> Placa do Veiculo: </b>  </label> 
+      <select id="senioridade" required>
+        <option selected disabled value="">  Selecione       </option>
+        <option>ORM-7800                                     </option>
+        <option>OZF-7J99                                     </option>
+        <option>RRC-3G61 / PCF-9C66                          </option>
+        <option>RRC-3G65 / QKT-8J19                          </option>                 
+      </select>
+   </div>
+
+<br>
+
+   <div>
+
+      <label for="opcao"  ><b>Tipo de Manutenção:</b> </label>
+       <select id="opcao" autocomplete="off" onchange="mostrarCampoExtra()" required>
+        <option selected disabled value="">  Selecione                      </option>
+        <option value="0">Eletrica                                          </option>
+        <option value="0">Corretiva                                         </option>
+        <option value="0">Preventiva                                        </option>
+        <option value="0">Preditiva                                         </option>      
+        <option value="0">Troca de Óleo                                     </option>   
+        <option value="0">Freios                                            </option>  
+        <option value="0">Suspensão                                         </option>  
+        <option value="0">Bateria                                           </option>  
+        <option value="0">Pneus                                             </option>  
+        <option value="0">Filtros                                           </option>
+        <option value="3">Outros                                            </option>
+      </select>
+   </div>
+
+    <div id="campo-extra" class="campo-extra">
+      <input type="text" id="campo-adicional" name="campo-adicional" class="caixa" placeholder="( faça sua descrição )" autocomplete="off" required minlength="5">
+      <div class="error-message" id="campo-adicional-error">Por favor, preencha este campo.</div>
+    </div>
+
+<br>
+    
+    <div>
+      <label   for="senioridade"> <b>Estabelecimento:</b> </label>
+      <input type="text"class="caixa" autocomplete="off" required minlength="5"> 
+    </div>
+
+
+    <div>
+      <label   for="senioridade"> <b>Valor:</b> </label>
+      <input type="number" class="caixa" autocomplete="off" required minlength=""> 
+    </div>
+
+    <div class="data" >
+      <label> <b> Data:</b></label>
+      <input type="date" id="dataSelecionada" required>
+    </div>
+
+    <label   for="senioridade"> <b>Observação:</b> </label>
+    <input type="text" class="observação" name="name"autocomplete="off" required minlength="5">
+
+<br><br><br>
+
+    <button type="submit" type="button" id="enviar" value="Enviar" class="enviar">Enviar</button>
+
+  </form>
+
+   <script src="Manutenção.js"></script>
+
+  </body>
+
+</html>

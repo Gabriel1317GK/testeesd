@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Formulário com Campo Condicional e Redirecionamento</title>
+      <link rel="stylesheet" href="Manutenção.css">
+    </head>
+
+  <body>
+
+  <form id="meuFormulario">
+  
+     <h2 class="tema">Registro de Combustivel</h2> <br>
+  
+   <div id="placa" autocomplete="off" required>
+
+     <label   for="senioridade">  <b> Placa do Veiculo: </b>  </label> 
+      <select id="senioridade" required>
+        <option selected disabled value="">  Selecione       </option>
+        <option>ORM-7800                                     </option>
+        <option>OZF-7J99                                     </option>
+        <option>RRC-3G61 / PCF-9C66                          </option>
+        <option>RRC-3G65 / QKT-8J19                          </option>                 
+      </select>
+   </div>
+
+<br>
+
+   <div>
+      <label for=""  ><b>Tipo do Combustivel:</b> </label>
+       <select id="" autocomplete="off" required>
+        <option selected disabled value="">  Selecione       </option>
+        <option> Gasolina                                    </option>
+        <option> Etanol                                      </option>
+        <option> Diesel                                      </option>
+        <option> Gás Natural                                 </option>
+      </select>
+   </div>
+
+<br>
+    
+    <div>
+      <label   for="senioridade"> <b>Nome do Posto:</b> </label>
+      <input type="text" class="caixa" autocomplete="off" required minlength="8">
+    </div>
+
+    <div>
+        <label   for="senioridade"> <b>Quantidade:</b> </label>
+        <input type="number" class="caixa" autocomplete="off" required minlength=""> 
+      </div>
+
+
+      <div>
+        <label   for="senioridade"> <b>Quilometragem:</b> </label>
+        <input type="number" class="caixa" autocomplete="off" required minlength=""> 
+      </div>
+
+
+    <div>
+      <label   for="senioridade"> <b>Valor Unitario:</b> </label>
+      <input type="number" class="caixa" autocomplete="off" required minlength=""> 
+    </div>
+
+    
+
+
+
+
+    <div class="data" >
+      <label> <b> Data:</b></label>
+      <input type="date" id="dataSelecionada" required>
+    </div>
+
+<br>
+
+    <button type="submit" type="button" id="enviar" value="Enviar" class="enviar">Enviar</button>
+
+  </form>
+
+   <script src="Combustivel.js"></script>
+
+  </body>
+
+</html>
